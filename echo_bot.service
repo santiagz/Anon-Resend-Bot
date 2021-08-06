@@ -1,0 +1,15 @@
+[Unit]
+Description=Echo anon bot for Telegram
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=Simple
+Restart=always
+RestartSec=1
+User=root
+WorkingDirectory=/root/PyBots
+ExecStart=/usr/bin/python3 /root/PyBots/echo.py
+
+[Install]
+WantedBy=multi-user.target
